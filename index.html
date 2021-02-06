@@ -1,47 +1,57 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width", initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
-    <title>Landing Page</title>
-</head>
-<body>
-    <section class="showcase">
-        <header>
-            <h2 class="logo">A Void: The Infinite</h2>
-            <div class="toggle"></div>
-        </header>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width", initial-scale=1.0">
+        <link rel="stylesheet" href="style.css">
+        <title>Landing Page</title>
+    </head>
+    <body>
+        <section class="showcase">
+            <header>
+                <h2 class="logo">A Void: The Infinite</h2>
+                <div class="toggle"></div>
+            </header>
 
-        <video src="Planet_2880x1220_HPA.mp4" width="100%" muted loop autoplay></video>
-        
-        <div class="overlay"></div>
+            <video src="Planet_2880x1220_HPA.mp4" width="100%" muted loop autoplay></video>
+            
+            <div class="overlay"></div>
 
-        <div class="text">
-            <h2>Your Life</h2>
-            <h3>Save Your Soul</h3>
-            <h4>Fight for your Existence</h4>
-            <p>Now or never.  Do or die.  I have no one, no one cares.</p>
-            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. 
-            Deserunt, enim rerum nesciunt quos similique debitis a perferendis incidunt sapiente qui?</p>
-            <a href="#">Read More</a>
+            <div class="text">
+                <h2>Your Life</h2>
+                <h3>Save Your Soul</h3>
+                <h4>Fight for your Existence</h4>
+                <p>Now or never.  Do or die.  I have no one, no one cares.</p>
+                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. 
+                Deserunt, enim rerum nesciunt quos similique debitis a perferendis incidunt sapiente qui?</p>
+                <a href="#">Read More</a>
+            </div>
+
+            <ul class="social">
+                <li><a href="#"><img src="facebook.png" alt=""></a></li>
+                <li><a href="#"><img src="twitter.png" alt=""></a></li>
+                <li><a href="#"><img src="instagram.png" alt=""></a></li>
+            </ul>
+        </section>
+
+        <div class="menu">
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">News</a></li>
+                <li><a href="#">Tasks</a></li>
+                <li><a href="#">Blog</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
         </div>
 
-        <ul class="social">
-            <li><a href="#"><img src="facebook.png" alt=""></a></li>
-            <li><a href="#"><img src="twitter.png" alt=""></a></li>
-            <li><a href="#"><img src="instagram.png" alt=""></a></li>
-        </ul>
-    </section>
+        <script>
+            const menuToggle = document.querySelector('.toggle')
+            const showcase = document.querySelector('.showcase')
 
-    <div class="menu">
-        <ul>
-            <li><a href="#">Home</a></li>
-            <li><a href="#">News</a></li>
-            <li><a href="#">Tasks</a></li>
-            <li><a href="#">Blog</a></li>
-            <li><a href="#">Contact</a></li>
-        </ul>
-    </div>
-</body>
+            menuToggle.addEventListener('click', () => {
+                menuToggle.classList.toggle('active')
+                showcase.classList.toggle('active')
+            })
+        </script>
+    </body>
 </html>
